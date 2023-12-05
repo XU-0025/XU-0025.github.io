@@ -1,0 +1,101 @@
+<HTML>
+<head>
+
+<title>
+Home
+</title>
+<meta name="description" content="This webpage goes through custom CSS rules">
+<meta name="keywords" content="CSS, Rules, HTML, simplify, custom, code">
+
+<style>
+body {
+background-image: url("b16.jpg");
+<--!603px for normal-->
+background-size: 1280px 603px;
+padding: 180px;
+font-family: "Arial";
+}
+
+.other {
+font-family: "Garamond";
+font-size: 65px;
+color: rgb(0,0,0);
+}
+
+
+input {
+border-radius: 24px;
+border: 1px solid rgb(0 0 0);
+background: rgb(128 128 128 / 50%);  
+padding: 20px;
+display: flex;
+z-index: 3;
+width: 638px;
+height: 44px;
+margin: 20px;
+position:relative; bottom: 48px;
+}
+
+input:hover{
+box-shadow: 100 0 8px 1px #A9A9A9;
+}
+
+form {
+display: flex;
+justify-content: center;
+}
+
+.parent button {
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid rgb(0 0 0);
+  height: 82px;
+  width: 86px;
+  box-shadow: 0 2px 4px white;
+  cursor: crosshair;
+
+}
+
+.round-6 {
+  border-radius: 20%;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<center><h1 id="datetime" class="other"></h1></center>
+<script>
+function updateDateTime() {
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+}
+setInterval(updateDateTime, 1000);
+</script>
+
+<form action="https://www.google.com/search" method="get"target="_blank" id="search-form">
+<input name="q" type="text" placeholder="Google Search" autocomplete="off" autofocus></form>
+
+
+<a href="https://www.google.com">
+</a>
+
+<div class="parent">
+<a href="https://jmss-vic.compass.education/"><button class="round-6" style="position:absolute; top: 30px; left: 20px; background-color: white; background: url(compass.png)"></button></a>
+</div>
+<div class="parent">
+<a href="https://jmss.instructure.com/?login_success=1"><button class="round-6" style="position:absolute; top: 142px; left: 20px; background: url(canvas.png)"></button></a>
+</div>
+<div class="parent">
+<a href="https://mail.google.com/mail/u/0/#inbox"><button class="round-6" style="position:absolute; top: 254px; left: 20px; background: url(mail.png)"></button></a>
+</div>
+<div class="parent">
+<a href="https://sites.google.com/jmss.vic.edu.au/subjects/home"><button class="round-6" style="position:absolute; top: 364px; left: 20px; background: url(subject.png)"></button></a>
+</div>
+<div class="parent">
+<a href="https://drive.google.com/drive/my-drive"><button class="round-6" style="position:absolute; top: 478px; left: 20px; background: url(drive.png)"></button></a>
+</div>
+</body>
+</HTML>
